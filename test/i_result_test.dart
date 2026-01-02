@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:result_types/result_types.dart';
+import 'package:rust_monads/result_types.dart';
 
 class TestError extends IError {}
 

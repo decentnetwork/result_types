@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:result_types/option.dart';
+import 'package:rust_monads/option.dart';
 
 void main() {
   test('Test Option Type', () {
