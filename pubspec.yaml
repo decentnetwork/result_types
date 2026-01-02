@@ -1,6 +1,6 @@
 name: result_types
-description: A new Flutter package project.
-version: 0.0.3
+description: Rust inspired Result and Option types for Dart/Flutter.
+version: 0.0.4
 homepage:
 
 environment:

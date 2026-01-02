@@ -1,5 +1,11 @@
 library c_result;
 
+typedef Result<V, E> = CResult<V, E>;
+typedef Success<V, E> = COk<V, E>;
+typedef Failure<V, E> = CErr<V, E>;
+typedef Ok<V, E> = COk<V, E>;
+typedef Err<V, E> = CErr<V, E>;
+
 sealed class CResult<Value, Error> {
   factory CResult.ok(Value value) = COk<Value, Error>;
   factory CResult.err(Error error) = CErr<Value, Error>;

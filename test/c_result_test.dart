@@ -24,6 +24,24 @@ CResult<int, CError> testFunctionErr(CError value) => switch (value) {
     };
 
 void main() {
+  test('Test Result typedef', () {
+    final result = Result<int, CError>.from(1);
+    assert(result is Success);
+    assert(~result == 1);
+
+    final result1 = Result<int, CError>.from(TestError());
+    assert(result1 is Failure);
+    assert(~result1 is TestError);
+
+    final result2 = Result<int, CError>.from(2);
+    assert(result2 is Ok);
+    assert(~result2 == 2);
+
+    final result3 = Result<int, CError>.from(UnimplementedError());
+    assert(result3 is Err);
+    assert(~result3 is UnimplementedError);
+  });
+
   test('Test CResult Type', () {
     final result = CResult<int, CError>.from(1);
     expect(result, isA<COk<int, CError>>());
